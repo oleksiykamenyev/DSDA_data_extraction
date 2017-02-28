@@ -1,0 +1,64 @@
+wad = nmdu - parse from DSDA
+category = uvspeed - parse from DSDA
+level = Map 01 or E2 or E1M7 or D2ALL - parse from DSDA? or from demo file
+players = kraflab,... (people making the demo) - parse from DSDA
+player_count = 1 (number of players in the game) - parse from demo
+tas_level = 0 (non tas), 1 (just segmented), 2 (slowdown / etc), 3 (partial building), 4 (built) - get from textfile
+port_family = PRBoom+ - parse from DSDA/demo file sometimes
+port_version = v2.5.1.4 - parse from DSDA/demo file sometimes
+complevel = 3 - parse from DSDA/demo file sometimes
+tics = 2135497 - parse from DSDA or levelstat
+levelstat = 0:02.97,0:36.11,... - parse from levelstat
+recorded_at = Mon, 13 Feb 2017 22:47:02 UTC +00:00 - get from demo file
+comments = ... - fuck if I know
+file_location = demos/nmdu/nm01-009.zip - download
+
+Demos:
+    wad = nmdu
+    category = uvspeed
+    skill level = 4
+    level = Map 01 or E2 or E1M7 or D2ALL
+    players = kraflab,... (people making the demo)
+    player_count = 1 (number of players in the game)
+    tas_level = 0 (non tas), 1 (just segmented), 2 (slowdown / etc), 3 (partial building), 4 (built)
+    engine = PRBoom+ v2.5.1.4 cl9 (\nXDRE v2.14...)
+    time = [hh:]mm:ss[.tt]
+    levelstat = 0:02.97,0:36.11,...
+    recorded_at = Mon, 13 Feb 2017 22:47:02 UTC +00:00
+    comments = ...
+    file_location = demos/nmdu/nm01-009.zip
+
+
+Wads:
+    wad_file: btsx
+    wad_name: Back to Saturn X
+    iwad: doom2
+    author: Various
+    wad_location: /wads/...
+    compatibility_level: matching guess and idgames parsed compat
+                         if any notable wads are missed, fill them in as well
+    year: could be cool
+    number of maps: maybe
+
+Ports:
+    family: PRBoom+
+    version: v2.5.1.4
+    port_location: /ports/...
+
+
+Players:
+    name: Richie Agnew
+    username: richie_agnew
+    twitch: richie42069
+    youtube: doom_guy531
+    Other ideas:
+      - current player profile text
+      - Compet-N ID? (probably not because it's obsolete :^)
+      - Doomworld username?
+
+
+other information:
+  longest demos (above 2 hours)
+  number of TAS demos
+  number of zipfiles with multiple demos/non-demo or textfile content
+  demo pack parsing

@@ -1,0 +1,122 @@
+Plan: automate as much DSDA data extraction as possible for a single source of info, which are:
+  - WADs
+  - Ports
+  - Players
+  - Demos
+
+For a single WAD, the following information will be needed with expected method of extracting listed below:
+  1. WAD file name:
+    a. Can be obtained from DSDA.
+    b. Caveats: zips containing multiple wads, different wad versions listed on separate pages on DSDA, and same-name wads.
+      i. Multiple wad zips will probably just need to be kept as is I think and stored in the same zip as the main wad.
+        - Their existence will probably be best to note by parsing the zip file and keeping track of all with multiple wads.
+        Afterwards, they will probably be best to go through manually to determine whether they are fixes, old versions, or
+        something else. These checks may be caught relatively well probably with regexes to determine anything with "fix"
+        and "old" in the title.
+          - For fixes, ideally perhaps it should be possible to identify the author(s), but that would be a lot of manual effort.
+          Otherwise, they will probably always stay in the same zip.
+          - Old versions may be worth separating out into separate versions on DSDA like newer versioned wads (e.g., d2twid). These
+          would then probably be tabbed or optionally displayed all on the same page according to the current design.
+          - I'm not sure whether there are other cases of zips containing multiple wads, probably will need individual decisions.
+        - Anything with a plays back with, etc. comment will probably need to be investigated to ensure that those wads are present
+        in the zips, otherwise may be best to have extra links to what's needed on the page.
+      ii. Different wad versions on separate pages will have to retain the extra identifier of version on the name of the wad. The
+      versions will be officially kept track of in the database I believe. Ideally, it may be best to determine if a wad has "official"
+      versions and display them, but that would probably be manual effort, just going by datestamp may be easier for now.
+      iii. Entirely different wads with same names will have to be dealt with with different datestamps. There is no current way
+      to differentiate between wad versions and different wads with same names from DSDA, this will just need to be done manually.
+  2. WAD name:
+    a. Can be obtained from idgames. If idgames is not available for a wad, need to check textfile and look for some obvious string
+    indicating name (if idgames convention is used for textfile, should be easy, but that's often not used). Otherwise, default to
+    wad filename.
+  3. IWAD:
+    a. Can be parsed from DSDA to an extent, otherwise textfile. Chex and Hacx could be excluded by default for this. Doom 1 wads
+    will always have only E#M# runs and such on DSDA, so they should not be an issue to deal with. D2/Plutonia/TNT are indistinguishable
+    from DSDA and idgames. Textfile sometimes contains a game entry based on idgames textfile format, but not always. Probably default
+    it to Doom 2.
+  4. Author:
+    a. DSDA has this info. FYI: will not always match idgames.
+  5. WAD location:
+    a. Will need to automate downloading and storing wad to somewhere in a directory under a wads/ folder.
+    b. Will need to automatically determine if a wad is downloadable at all or is commercial.
+  6. Compatibility level:
+    a. To an extent can be obtained from textfile and to an extent can be guessed from DSDA but neither is trustworthy. Textfile by
+    idgames format has fields such as "tested with" and "may not run with," perhaps others, those can be checked for expected compat,
+    and if that matches a guessed value from DSDA (based on the majority of the current runs), this can be set to that value with
+    relative certainty.
+    b. Notable wads that do not give good guesses by above method can be set manually.
+    c. Complicated cases may be kept track of and indicated on DSDA (e.g., Sunder (cl2 or cl9?), Eviltech (cl2/cl9 or ZDoom), etc.)
+  7. Year:
+    a. Prefer idgames upload date, if that doesn't exist take file datestamp. Should take care to sanity check that the year is after
+    wads started existing (probably something like March 1994 at minimum) and not in the future as file datestamps may be corrupted.
+    Default value would have to be null or unknown or something.
+
+For a single port, the following information will be needed with expected method of extracting listed below:
+  1. Port family, version, location:
+    a. All of these can be obtained from DSDA front page, should be easy to parse.
+      i. Will want to make sure that all ports across DSDA are represented by the front page and the front page doesn't have anything
+      unnecessary. Can be figured out by cross-checking the two datasets.
+
+For a single player, the following information will be needed with expected method of extracting listed below:
+  1. Name, player profile text (if needed):
+    a. Parsed from DSDA
+  2. Username:
+    a. Sanirized based on DSDA name. Remove special characters, spaces, etc.
+  3. Twitch, YouTube
+    a. Manual
+  4. Compet-N ID (if needed)
+    a. Parsed from DSDA
+
+Demo:
+  1. WAD
+    a. Parsed from DSDA, wad fixes and such may not be possible to do without manual effort
+  2. Category
+    a. Parsed from DSDA
+    b. Ideally, this would be checked with an auto-testing tool.
+  3. Skill level, level, number of players
+    a. Parsed from demo if possible, not sure how to handle advanced/weird source ports (possible based on category if it's parseable)
+  4. Players
+    a. Parsed from DSDA
+  5. TAS level
+    a. Best guess from textfile or manual? (not too many TAS demos anyway)
+  6. Engine/complevel
+    a. DSDA and demo file would work
+  7. Time, other levelstat info
+    a. Levelstat or DSDA time
+  8. Recorded at
+    a. Either timestamp of textfile or demo
+  9. Comments
+    a. May be possible to parse sometimes, but probably not worth it.
+  10. File location:
+    a. Download and store according to whatever format is chosen (demos/player/test.lmp? demos/player/wad/test.lmp?)
+  11. Will need to keep track of all zips with multiple demos and stuff that isn't demos and textfiles
+  12. Demo packs
+    a. Will be kept together in new DSDA
+    b. Still need to keep track of as many of the above as feasible and watch for extra demos/etc. that are not displayed on
+    the table
+
+
+Downloading everything:
+  1. Need to iterate across all players and wads and get all the information possible
+    a. Ideally this would be done by ID and not by wad pages to determine if there are any hidden wads or deleted wads, as this would
+    be interesting info
+      - Likewise for packs
+  2. Have a way to update for new changes based on the latest update and probably based on a manually set config for changed DSDA info
+  if Andy manually updates some info as well
+    a. In order to facilitate this, it may be better to download all DSDA pages in order to get a complete state of info at a particular
+    point in time so that new info is easy to incorporate.
+
+
+Individual tools needed to:
+  1. Query idgames for info from the UI
+  2. Parse wad textfiles that is aware of whatever templates exist (idgames, for instance)
+  3. Parse DSDA (much of DSDA client code can be used)
+  4. Statically parse info out of a demo file
+  5. Automatically run levelstat and get stats about a demo
+    a. Hopefully automatically etermine what settings to use to play back demo, which demo to use, which wads to use, and will need to
+    parse levelstat
+    b. Ideally using expanded pr+ to generate more info in levelstat
+  6. Parse demo textfile? Need to be aware of common formats as well, although there aren't many standards.
+  7. Possibly parse Compet-N player page for IDs
+  8. Auto-download demos from DSDA into given directories
+  9. Sanitize player name and possibly wad filename?
