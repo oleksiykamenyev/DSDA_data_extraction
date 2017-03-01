@@ -23,7 +23,7 @@ For a single WAD, the following information will be needed with expected method 
       ii. Different wad versions on separate pages will have to retain the extra identifier of version on the name of the wad. The
       versions will be officially kept track of in the database I believe. Ideally, it may be best to determine if a wad has "official"
       versions and display them, but that would probably be manual effort, just going by datestamp may be easier for now.
-      iii. Entirely different wads with same names will have to be dealt with with different datestamps. There is no current way
+      iii. Entirely different wads with same names will have to be dealt with by using different datestamps. There is no current way
       to differentiate between wad versions and different wads with same names from DSDA, this will just need to be done manually.
   2. WAD name:
     a. Can be obtained from idgames. If idgames is not available for a wad, need to check textfile and look for some obvious string
@@ -65,7 +65,7 @@ For a single player, the following information will be needed with expected meth
   3. Twitch, YouTube
     a. Manual
   4. Compet-N ID (if needed)
-    a. Parsed from DSDA
+    a. Parsed from Compet-N site
 
 Demo:
   1. WAD
@@ -84,7 +84,7 @@ Demo:
   7. Time, other levelstat info
     a. Levelstat or DSDA time
   8. Recorded at
-    a. Either timestamp of textfile or demo
+    a. Either timestamp of textfile or demo (maybe both should be maintained?)
   9. Comments
     a. May be possible to parse sometimes, but probably not worth it.
   10. File location:
@@ -109,14 +109,82 @@ Downloading everything:
 
 Individual tools needed to:
   1. Query idgames for info from the UI
+    - Get wad name
+    - Get wad upload year
+
   2. Parse wad textfiles that is aware of whatever templates exist (idgames, for instance)
+    - Get wad name
+    - Get IWAD requirements
+    - Get compatibility info
+
   3. Parse DSDA (much of DSDA client code can be used)
+    - Get wad filename
+    - Get info about which IWAD needs to be used
+      - Doom 1 wads only
+      - Manual exceptions can be included for Hacx and Chex
+    - Get author info
+    - Guess compatibility (functionality largely exists in DSDA client but can be improved)
+    - Get port info, cross-compare abotu ports actually used on DSDA
+    - Get player name, player profile page text
+    - Get whatever file(s) is/are needed for playback of a demo
+    - Get demo category
+      - Non-standard categories will have to be best effort guesses with extra manual effort
+    - Get players involved in making demo
+    - Engine and complevel used
+    - Time (in order to compare to whatever was generated with levelstat)
+
   4. Statically parse info out of a demo file
+    - For demos with a footer, could be used to determine files used during recording
+    - Skill level, level number, number of players
+    - Engine/complevel used
+    - Get timestamp?
+    - For demo zips, need to get info about extra demo files and extra other files
+      - Likewise with demo packs
+
   5. Automatically run levelstat and get stats about a demo
-    a. Hopefully automatically etermine what settings to use to play back demo, which demo to use, which wads to use, and will need to
+    a. Hopefully automatically determine what settings to use to play back demo, which demo to use, which wads to use, and will need to
     parse levelstat
     b. Ideally using expanded pr+ to generate more info in levelstat
+      - Could be used to determine concrete category for all pr+ playable demos
+
   6. Parse demo textfile? Need to be aware of common formats as well, although there aren't many standards.
-  7. Possibly parse Compet-N player page for IDs
-  8. Auto-download demos from DSDA into given directories
-  9. Sanitize player name and possibly wad filename?
+    - Best guess for TAS level
+    - Engine/complevel used? (for unclear cases)
+    - Get timestamp?
+    - Get comments?
+
+  7. Auto-download files from DSDA into given directories
+    - Wad, source port, and demo files
+    - Iterate over all wads, players, demo packs by ID preferably (to catch any possible unusual cases of something not being listed explicitly)
+    - Pull new stuff from updates page automatically
+    - Be able to manually state via config if anything needs to be updated if Andy manually updates
+
+  8. Sanitize player name and wad filename
+    - Replace spaces with underscores or something, escape nonstandard characters
+    - Keep track of wads with the same name and sort out into different versions of the same wad and different wads entirely
+      - Can only be automated partially
+        - if the wads are labeled D1 and D2, they are obviously different
+        - if the wads are labeled 1st/2nd release, they are versions of the same wad
+
+  9. Parse wad zip/file
+    - Determine which wad zips have multiple wad files
+      - Use regex matching to determine the kind of file (fix, old version, other, etc.)
+    - Likewise determine Dehacked file presence, etc.
+    - Get main file year
+      - Ignore year in case corrupted (before early 1994 or in the future)
+
+  10. Parse from Compet-N?
+    - Compet-N ID
+    - Aliases? (maybe I forgot or neglected to include some)
+
+Manual effort:
+  - Investigate multiple wad files in zips individually
+  - Investigate plays back with, etc. comments on demos
+  - Differentiate between same-name wads and different versions of the same wad, may want to handle odd cases
+  - Set IWAD info for notable wads (may want to come up with a list of what is notable)
+    - All wads above 100 demos? Still will miss particularly notable single-map wads.
+  - Set compatibility levels for notable wads and determine controversial cases like Sunder
+  - Player Twitch and YouTube info
+  - Info on non-standard categories
+  - Determine info on which player was which number for co-op demos (not sure if DSDA has any standard for this)
+  - Determine TAS level for demos (maybe start with automatically generated best guesses)
