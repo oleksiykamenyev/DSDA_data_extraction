@@ -121,11 +121,14 @@ Individual tools needed to:
     - Get wad filename
     - Get info about which IWAD needs to be used
       - Doom 1 wads only
-      - Manual exceptions can be included for Hacx and Chex
+      - Manual exceptions can be included for all IWADs, wads for other IWADs
     - Get author info
     - Guess compatibility (functionality largely exists in DSDA client but can be improved)
+
     - Get port info, cross-compare abotu ports actually used on DSDA
+
     - Get player name, player profile page text
+
     - Get whatever file(s) is/are needed for playback of a demo
     - Get demo category
       - Non-standard categories will have to be best effort guesses with extra manual effort

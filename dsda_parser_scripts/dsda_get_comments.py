@@ -3,7 +3,6 @@
 Gets list of comments and frequency for each comment
 """
 
-import helper_functions.helper_functions as hf
 import io
 import operator
 import os

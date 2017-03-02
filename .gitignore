@@ -133,7 +133,7 @@ latest_update.txt
 # All code from DSDA client
 config/**/*
 dsda_client/**/*
-helper_functions/**/*
+dsda_parser_scripts/helper_functions/**/*
 
 # Unneeded plan draft
 plan.txt
