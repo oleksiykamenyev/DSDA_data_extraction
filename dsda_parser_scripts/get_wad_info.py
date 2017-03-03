@@ -384,9 +384,9 @@ def get_wad_info(wad_id):
 
 def main():
     """Main function"""
-    get_wad_info('2')
+    get_wad_info('aa')
 
 
 if (__name__ == '__main__' or
-        __name__ == 'dsda_command_line__main__'):
+        __name__ == 'get_wad_info__main__'):
     main()
