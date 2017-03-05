@@ -129,10 +129,10 @@ Individual tools needed to:
 
     - Get player name, player profile page text
 
-    - Get whatever file(s) is/are needed for playback of a demo
+    - Main wad
     - Get demo category
       - Non-standard categories will have to be best effort guesses with extra manual effort
-    - Get players involved in making demo
+    - Get player(s) involved in making demo
     - Engine and complevel used
     - Time (in order to compare to whatever was generated with levelstat)
 
@@ -191,3 +191,7 @@ Manual effort:
   - Info on non-standard categories
   - Determine info on which player was which number for co-op demos (not sure if DSDA has any standard for this)
   - Determine TAS level for demos (maybe start with automatically generated best guesses)
+
+Other:
+  - Get whatever file(s) is/are needed for playback of a demo
+    - Some combination of manual and auto maybe?

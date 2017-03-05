@@ -1,0 +1,42 @@
+General:
+Speedmap sessions commonly did not maintain a strict complevel requirement per player. In particular:
+  - Abyssal sessions 1-15 had varying complevels per level
+  - #doom sessions had varying complevels per level
+  - DW speedmapping sessions had varying complevels per level
+  - Same for SargeBaldy speedmapping sessions?
+
+
+Specific wads/series
+Armadosia 2005:
+  - Mostly vanilla, but various maps are limit-removing and others are Boom-only
+    - https://www.doomworld.com/vb/post/1347913
+
+Arxangels:
+  - Mostly limit-removing, some maps require either complevel -1 or *ZDoom
+
+Chillax:
+  - Compatibility is mostly irrelevant from the original design standpoint, made to play in MP on
+  Zandronum. Fixes have been made to make maps possible in cl9.
+
+Doomworld Mega Project series:
+  - Various complevels with zero rules
+
+Doom 64 EX:
+  - Its own thing
+
+Doom 64 TC:
+  - Comes packaged with an old version of Doomsday
+
+Eviltech:
+  - Some maps need ZDoom, but mostly works in PrBoom+ complevel 2
+
+Ludicrium:
+  - Requires ZDoom, but maps seem to work in PrBoom+ except are semi-broken?
+
+Quagmire (1994):
+  - Broken on complevel 3 on the intended route, works in complevel 0 (Doom v1.2 compat), completable
+  and maxable in both
+
+Sunder:
+  - One map breaks on cl9 due to Boomism, everything else works in cl2, no Boom features used
+  explicitly
