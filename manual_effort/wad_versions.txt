@@ -1,0 +1,70 @@
+Different versions, same wad filename. These will need to be investigated to see if internal versioning existed
+in order to categorize them better. May want to investigate how significant the differences are too:
+  1994tu: 2011-03, 2011-08, 2011-11
+    - no internal version available
+  afro: 1994-04-10 and 1994-04-18, the two wads appear to be virtually identical
+    - no internal version available
+  aliens: 1994 and 2000, 2000 version fixes critical bugs and updates for playability in modern source ports,
+          otherwise no difference, fixes done by Quasar
+  alt: 2012-05 and 2012-12
+  andy: v1 and v2
+  armadosia: 2005 and 2016, 2016 version has fixes for compatibility issues and such by Never_Again
+  av: 1st release and 2nd release, 2nd release has a map replaced with a completely new map among other
+      fixes
+  btsx_e1: 2012, 2013, 2017
+  chillax: 2011 and 2013
+  d2twid: 2013-11 and 2013-12
+  freedoom: 0.9, 0.10.1, 0.11
+  f_ep2: 1st release and 2nd release
+  gd: 2014-11, 2015-02, 2016-08
+  hellbnd: 2013-06 and 2013-09
+  hphobia: 2013-02 and 2013-05
+  laitos: 2001 and 2002, v1.1 and v1.4 of the same wad
+  nova: 2014 and 2015
+  resurge: 2014-11 and 2015-02
+  scythe2: 1st and 2nd release
+  twzone: 1st and 2nd release
+  ur: 2013-09, 2013-11, 2014-04
+  venom: 1995, 1998
+  white2: 2014-03-02 and 2014-03-09
+
+Separate wads with same filename:
+  2 (1994) and 2 (2013)
+  666 (1994) and 666 (1998)
+  anomaly (1997) and anomaly (2013)
+  attack and attack (ML)
+  best (1994) and best (2014)
+  beyond (D1) and beyond (D2)
+  bunker (1994), bunker (1995), bunker (1997)
+  canyon and canyon (ML)
+  carnage (1994) and carnage (1995)
+  castle (D1) and castle (D2)
+  cavern (1994) and cavern (1995)
+  crypt (1994) and crypt (1995)
+  depths (1) and depths (2)
+  deus (1994) and deus (1996)
+  eden (D1) and eden (D2)
+  escape2 (1994) and escape2 (1995)
+  hellcore (1998), hellcore (2004), hellcore (2006)
+    - Hellcore 2006 is version 2.0 of Hellcore 2004 with some major revamps and new maps, and with
+    fewer maps, so they probably count as separate wads. Hellcore 1998 is entirely different)
+  manor and manor (ML)
+  mines 1995-07, mines 1995-12, mines 1996
+  paradox (1996) and paradox (ML)
+  phobos3 (1998) and phobos3 (2009)
+  quagmire (1994) and quagmire (1995)
+  thunder2 (D1) and thunder2 (D2)
+  tunnel (1994) and tunnel (2004)
+  tunnels (1996) and tunnels (1998)
+
+
+WAD compilations:
+
+
+Misc stuff:
+  2002ado and 2002ad10
+    - 2002ad10 is 10th anniversary edition of 2002ado with new maps and various changes.
+  hr and hr2beta
+    - hr2beta is beta version of HR 2, unclear on how different the two are
+  hr and hrep1
+    - hrep1 is the ep 1 beta release of HR, unclear on how different the maps are from final version
