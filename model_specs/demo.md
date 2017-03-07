@@ -8,6 +8,7 @@
 `text` **levelstat** *`02:11.13,04:01.00`*  
 `datetime` **recorded_at**  
 `boolean` **has_tics**  
+`integer` **version**, default: 0  
 `string` **engine** *`PRBoom+ v2.5.1.4 cl9\nXDRE 2.14`*  
 `belongs_to` **wad**  
 `belongs_to` **category**  
