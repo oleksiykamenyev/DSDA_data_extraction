@@ -5,7 +5,7 @@
 ```
 `integer` **guys**, number of players *in the game*  
 `string` **level** *`Map 01, E1M1, Ep1, D2ALL`*  
-`text` **levelstat** *`02:11.13,04:01.00`*  
+`text` **levelstat** *`02:11.13\n04:01.00`*  
 `datetime` **recorded_at**  
 `boolean` **has_tics**  
 `integer` **version**, default: 0  
