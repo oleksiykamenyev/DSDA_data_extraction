@@ -3,6 +3,7 @@
 `string` **author**  
 `string` **year** *optional*  
 `string` **compatibility** *optional*  
+`boolean` **single_map**  
 `boolean` **is_commercial**  
 `integer` **versions**  
 `belongs_to` **iwad**  
