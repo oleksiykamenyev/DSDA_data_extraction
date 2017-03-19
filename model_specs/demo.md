@@ -10,6 +10,8 @@
 `boolean` **has_tics**  
 `integer` **version**, default: 0  
 `string` **engine** *`PRBoom+ v2.5.1.4 cl9\nXDRE 2.14`*  
+`integer` **download_count**  
+`string` **video_link**  
 `belongs_to` **wad**  
 `belongs_to` **category**  
 `has_many` **players**  
