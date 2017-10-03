@@ -20,6 +20,7 @@ in order to categorize them better. May want to investigate how significant the 
   hellbnd: 2013-06 and 2013-09
   hphobia: 2013-02 and 2013-05
   laitos: 2001 and 2002, v1.1 and v1.4 of the same wad
+  ndcp2: 2009 and 2010
   nova: 2014 and 2015
   resurge: 2014-11 and 2015-02
   scythe2: 1st and 2nd release
@@ -47,7 +48,7 @@ Separate wads with same filename:
   escape2 (1994) and escape2 (1995)
   hellcore (1998), hellcore (2004), hellcore (2006)
     - Hellcore 2006 is version 2.0 of Hellcore 2004 with some major revamps and new maps, and with
-    fewer maps, so they probably count as separate wads. Hellcore 1998 is entirely different)
+    fewer maps, so they probably count as separate wads. Hellcore 1998 is entirely different.
   manor and manor (ML)
   mines 1995-07, mines 1995-12, mines 1996
   paradox (1996) and paradox (ML)
@@ -57,8 +58,176 @@ Separate wads with same filename:
   tunnel (1994) and tunnel (2004)
   tunnels (1996) and tunnels (1998)
 
+Different versions of the same wad:
+  thekeep.wad, the-keep.wad, and thekeep2.wad by Norman Scott
+    - The earliest is the-keep.wad, I believe, followed by thekeep and thekeep2, they have fairly substantial
+    differences, though. thekeep2 also appears as WADPAK3 e3m2
 
-WAD compilations:
+WAD compilations (only ones currently mirrored on DSDA are listed here):
+  wadpak1a:
+    e1m1: tncross.wad, does not exist anymore, but a second version of the level called tncross2 is on DSDA
+    e1m2: tree1.wad, same as tree1_0
+    e1m3: huh.wad, doesn't seem to exist anymore
+    e1m4-e1m6: forest.wad e2m1-e2m3, DSDA has forest30 which is v3.0 of forest.wad, idgames has forest32 (v3.2)
+    e1m7: evil_e.wad
+    e1m8: fortress.wad, same as dmfort
+    e1m9: tek.wad
+    e2m1: maze1.wad, same as amazed on DSDA
+    e2m2: lewis21f.wad
+    e2m3: 11bones.wad
+    e2m4: longmtch.wad
+    e2m5: 666.wad, 666 (1994) on DSDA
+    e2m6: cortyr_b.wad
+    e2m7: beholder.wad
+    e2m8: megawatt.wad, exists on idgames as part of megapack.zip
+    e2m9: castle.wad, castleas on idgames
+    e3m1: stones.wad by Michael Kelsey
+    e3m2: melange.wad by Kenneth S. Forte
+    e3m3: marx1_2.wad
+    e3m4: markroom.wad
+    e3m5: moonbase.wad, same as mb_new.wad
+    e3m6: octagon.wad
+    e3m7-e3m8: fy1a.zip ~ fy1_1-2.wad e1m2-e1m1
+    e3m9: chris.wad, e1m1cnc on idgames
+  wadpak2:
+    e1m1: hhh-21.wad
+    e1m2: hhh-22.wad
+    e1m3: roomy.wad, modification of markroom.wad
+    e1m4: 777.wad
+    e1m5: ttadom11.wad
+    e1m6: sc.wad by Christian Antkow
+    e1m7: ledges2.wad, also a version exists on idgames that's ledges2i.wad, and ledges.wad is mentioned in
+          the textfile (not on idgames)
+    e1m8: scream.wad by Cameron Newham
+    e1m9: cwwad.wad
+    e2m1: wille1m1.wad
+    e2m2: drkstair.wad, author unclear, Greytale in demo pack, but idgames wad called this has anonymous author
+    e2m3: sweet.wad by James Bearden, sweet10 (v1.0) exists on DSDA, idgames also has sweet21 (v2.1)
+    e2m4: pleasure.wad
+    e2m5: awp11f.wad, dmawpf on idgames
+    e2m6: proto1.wad
+    e2m7: woga11.wad
+    e2m8: petkillr.wad
+    e2m9: wedge.wad
+    e3m1: jal_cas1.wad
+    e3m2: trench.wad by Joshua Lehrer & Fabian Tillier
+    e3m3: village.wad by Alex Siegel
+    e3m4: tree2.wad
+    e3m5: bludlust.wad, bludlst2 on idgames
+    e3m6: crusher.wad by Ethan Brodsky
+    e3m7: sewers.wad by David Calvin & David Blanshine
+    e3m8: pyramid.wad by Dave Brown
+    e3m9: k9.wad
+  wadpak3:
+    e1m1-e1m3: combat.wad by Karl R. Peters, may also have duplicate levels in combat_2.wad (need to check)
+    e1m4: memphis.wad
+    e1m5: afro.wad by Tim Scott
+    e1m6: uca.wad
+    e1m7: runlkhl2.wad
+    e1m8: ngs1.wad
+    e1m9: nm0001.wad
+    e2m1: maverick.wad (a Doom 2 conversion with the same name exists on idgames as well)
+    e2m2: woodhall.wad by David Damerell (idgames has a second attempt version called woodhal2.wad, the original can be
+          found on wad-archive)
+    e2m3: storage.wad by Sean R. Malloy
+    e2m4: cyke.wad by Joe Popp (aka cYcLoPs)
+    e2m5: young1.wad (both standalone and wadpak version require a reject fix)
+    e2m6: symbolic.wad
+    e2m7: processr.wad
+    e2m8: realm10.wad
+    e3m1: techbase.wad
+    e3m2: thekeep2.wad by Norman Scott
+    e3m3: core.wad by Barry Ferg
+    e3m4: opost21.wad by Scott Amspoker, this wad was later converted to Doom 2 with various changes under the same
+          name, later to be included in theme17.zip as the recommended wad to play with the theme17 deh, and then
+          reuploaded again as thopost2 again including the theme17 Dehacked patch
+    e3m5: crosfr01.wad
+    e3m6: sports.wad by Alan Retlick
+    e3m7: h_hotel.wad
+    e3m8: office.wad by Joe Kontrad
+    e3m9: e1m1sas.wad
+  wadpak4:
+    e1m1-e1m3,e1m9: chris_e1.wad by Christen David Klie, later to expand into chrisk.wad and become the base of ep 1
+                    of The Lost Episodes of Doom
+    e1m4: deth1.wad
+    e1m5: tibet.wad by Keith Sheehan
+    e1m6: tallon.wad
+    e1m7: thelast.wad
+    e1m8: comcon.wad
+    e2m1: chase.wad by Alex Siegel
+    e2m2: makdoom2.wad by Martin A. Krebs "The MAK", idgames contains mak4-dm2.wad which is a conversion of this map
+          as well as other maps in the makdoom series to Doom 2, uncertain if the original wads are still around
+    e2m3: killzone.wad
+    e2m4: ziggurat.wad by James Roven
+    e2m5: djw11.wad
+    e2m6: bunker.wad by Terry Hamel
+    e2m7: highwire.wad
+    e2m8: draco1.wad by Erik Cullins (author info is erik on idgames), zipfile is draco.zip, filename is draco1.wad
+    e2m9: shepherd.wad
+    e3m1: training.wad by Jon Oden
+    e3m2: converm.wad
+    e3m3: dungeon1.wad by Miles Constable
+    e3m4: pentgram.wad
+    e3m5: styfst13.wad
+    e3m6: beware.wad, author unclear, Greytale in demo pack, but idgames wad called this has anonymous author,
+          definitely same author as drkstair.wad (e2m2 in wadpak2), though
+    e3m7: surmont.wad
+    e3m8: town.wad by Kevin Haley & Bill Courneya, max secrets requires use of Doom v1.2
+    e3m9: acheron.wad by John W. Anderson (AKA Dr. Sleep), idgames also has acheron2.wad, which seems to be conversion
+          to Doom 2 (perhaps other changes), achron22.wad which is an update of acheron2, I believe, and  acheron6.wad
+          which is a conversion of acheron.wad to Doom v1.666
+  heroes (https://doomwiki.org/wiki/Heroes):
+    e1m1: afro.wad by Tim Scott
+    e1m2: brave.wad (Unknown author), dmbrav on idgames
+    e1m3: infest.wad by Nicholas Bell, dmifst on idgames
+    e1m4: megawatt.wad, exists on idgames as part of megapack.zip
+    e1m5: warbaby.wad e2m1 by Warbaby aka Ben Morris, also known as tech.wad, I do not known if the standalone version
+          exists or ever existed
+    e1m6: opost21.wad by Scott Amspoker, this wad was later converted to Doom 2 with various changes under the same
+          name, later to be included in theme17.zip as the recommended wad to play with the theme17 deh, and then
+          reuploaded again as thopost2 again including the theme17 Dehacked patch
+    e1m7: frenzy.wad by Jeffery Chow
+    e1m8: _wow_.wad by Jon Landis, on idgames as 1wow1.wad, also may be listed as !wow!.wad
+    e1m9: crusher.wad by Ethan Brodsky
+    e2m1: gryblood.wad, author unclear, Greytale in demo pack, but idgames wad called this has anonymous author,
+          definitely same author as drkstair.wad (e2m2 in wadpak2) and beware.wad (e3m6 in wadpak4), though
+    e2m2: core.wad by Barry Ferg
+    e2m3: warbaby.wad e2m2 by Warbaby aka Ben Morris, also known as ben10.wad, I do not known if the standalone version
+          exists or ever existed
+    e2m4: start1.wad by Al Dewey (may only be present in heroes.wad)
+    e2m5: killzone.wad
+    e2m6: whitroom.wad
+    e2m7: sudtic.wad E2M6
+    e2m8: hex1.wad by Peter Naus
+    e2m9: prodoom.wad (pvbdeath.wad found in prodoom.wad) by James Atkinson (Professor Doom)
+    e3m1: marx1_2.wad
+    e3m2: peri11.wad
+    e3m3: 11fortko.wad
+    e3m4: start2.wad by Al Dewey (may only be present in heroes.wad)
+    e3m5: bcomplex.wad
+    e3m6: crater.wad by Jin H. Kim "Time Traveler", a larger DM-only version of this exists called cratered.wad
+    e3m7: tower2.wad by Chris Kendall
+    e3m8: tigerden.wad
+    e3m9: forgex.wad
+    e4m1: town.wad by Kevin Haley & Bill Courneya, max secrets requires use of Doom v1.2
+    e4m2: daemon2.wad by Cameron Newham
+    e4m3: spillway.wad
+    e4m4: hooter.wad
+    e4m5: dmturm.wad
+    e4m6: dmatch1.wad by Al Dewey (may only be present in heroes.wad)
+    e4m7: tibet.wad by Keith Sheehan
+    e4m8: tgmo2.wad
+    e4m9: dmatch2.wad by Al Dewey (may only be present in heroes.wad)
+  heroes2 (https://doomwiki.org/wiki/Heroes_2), currently only map 1 of heroes 2 has a demo on DSDA:
+    map01: evildog2.wad by Al Dewey
+  megawad.wad: no maplist available as far as I can tell
+  megawad3.wad:
+    looks to be a compilation of 10 sector submissions, I don't know if any of them made it into the final 10 sector wad
+    info here: https://www.doomworld.com/sda/tene0.htm
+  collect.wad: no maplist on the Internet, but NA has indicated that all maps were identified
+  collect2.wad: no maplist on the Internet, but NA has indicated that all maps were identified
+  collect3.wad: no maplist on the Internet, but NA has indicated that all maps were identified
+  biggest_.wad: no maplist on the Internet, but NA has indicated that all maps were identified
 
 
 Misc stuff:
